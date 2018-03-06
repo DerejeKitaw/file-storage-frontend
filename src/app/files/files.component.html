@@ -1,8 +1,8 @@
-<h2>{{fileType.name | uppercase}} Details</h2>
-<div><span>id: </span>{{fileType.id}}</div>
-<div>
-  <label>
-    <input [(ngModel)] = fileType.name placeholder="name">
-  </label>
-</div>
-<div><span>content: </span>{{fileType.content}}</div>
+<h2>Constant files</h2>
+<ul class="files">
+  <li *ngFor="let file of files" [class.selected] = "file === selectedFile" (click)="onSelect(file)">
+    <span class="badge">{{file.id}}</span> {{file.name}}
+  </li>
+</ul>
+<app-file-content [file] = "selectedFile"></app-file-content>
+
