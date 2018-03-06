@@ -1,7 +1,7 @@
 <h2>Constant files</h2>
 <ul class="files">
   <li *ngFor="let file of files" [class.selected] = "file === selectedFile" (click)="onSelect(file)">
-    <span class="badge">{{file.id}}</span> {{file.name}}
+    {{file.name}}
   </li>
 </ul>
 <app-file-content [file] = "selectedFile"></app-file-content>
