@@ -1,3 +1,8 @@
-<p>
-  files works!
-</p>
+<h2>{{fileType.name | uppercase}} Details</h2>
+<div><span>id: </span>{{fileType.id}}</div>
+<div>
+  <label>
+    <input [(ngModel)] = fileType.name placeholder="name">
+  </label>
+</div>
+<div><span>content: </span>{{fileType.content}}</div>
