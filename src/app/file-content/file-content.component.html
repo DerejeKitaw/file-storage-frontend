@@ -1,0 +1,12 @@
+<div *ngIf="file">
+    <h3>{{file.name}} Details</h3>
+    <div>
+      <span>id: </span>
+      {{file.id}}
+    </div>
+    <div>
+      <label>
+        name: <input [(ngModel)] = "file.name" placeholder="name">
+      </label>
+    </div>
+</div>
