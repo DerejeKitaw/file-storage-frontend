@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FileType } from '../type/FileType';
 import { Files } from '../constants/test-files';
+import { FileService } from '../service/file.service';
 
 @Component({
   selector: 'app-files',
@@ -9,7 +10,7 @@ import { Files } from '../constants/test-files';
 })
 export class FilesComponent implements OnInit {
 
-  files = Files;
+  files: FileType[];
 
   selectedFile: FileType;
 
@@ -17,9 +18,14 @@ export class FilesComponent implements OnInit {
     this.selectedFile = file;
   }
 
-  constructor() { }
+  getFiles(): void {
+    this.fileService.getFiles().subscribe(files => this.files = files);
+  }
+
+  constructor(private fileService: FileService) { }
 
   ngOnInit() {
+    this.getFiles();
   }
 
 }
