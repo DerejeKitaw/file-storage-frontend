@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { FilesComponent } from './files/files.component';
-import { FileContentComponent } from './file-content/file-content.component';
-import { FileService } from './service/file.service';
-import { MessagesComponent } from './messages/messages.component';
-import { MessageService } from './service/message.service';
+import { FilesComponent } from './components/files/files.component';
+import { FileContentComponent } from './components/file-content/file-content.component';
+import { FileService } from './services/file/file.service';
+import { MessagesComponent } from './components/messages/messages.component';
+import { MessageService } from './services/message/message.service';
 
 
 @NgModule({
