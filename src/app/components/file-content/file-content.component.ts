@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FileType } from '../type/FileType';
+import { FileType } from '../../type/FileType';
 
 @Component({
   selector: 'app-file-content',
